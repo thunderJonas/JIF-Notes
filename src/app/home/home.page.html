@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Notes Junge</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addNote()" [routerLink]="'/home.page.html'" routerDirection="root">
+        <ion-icon slot="icon-only" name="clipboard"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item
+      button
+      detail
+      lines="none"
+    *ngFor="let note of notesService.notes"
+    [routerLink]="'/notes/' + note.id"
+    routerDirection="forward">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-label>{{ note.title }}</ion-label>
+
+    </ion-item>
+  </ion-list>
 </ion-content>
