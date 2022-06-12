@@ -18,6 +18,7 @@ export class HomePage implements OnInit {
     this.notesService.load();
   }
 
+
   addNote(){
 
     this.alertCtrl.create({

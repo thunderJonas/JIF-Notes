@@ -19,4 +19,9 @@
     placeholder="Wie fühlst du dich dabei?...">
   </ion-textarea>
 
+  <ion-range class="ranger" min="0" max="8" debounce="500" pin="true" step="1" snaps="true" ticks="true"
+  (ionChange)="_ranCha($event)">
+
+  </ion-range>
+
 </ion-content>

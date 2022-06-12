@@ -5,3 +5,27 @@ ion-textarea {
   min-height: fit-content;
 }
 
+
+ion-range::part(tick) {
+  height: 10px;
+  width: 1px;
+  top: 16px;
+  border-radius: 50%;
+}
+ion-range::part(tick-active) {
+  height: 10px;
+  width: 1px;
+  top: 16px;
+  border-radius: 50%;
+}
+
+.ranger {
+  --bar-background: #505050;
+  --bar-border-radius: 0;
+  --bar-height: 2px;
+  --knob-background: #6e22ff;
+  --knob-border-radius: 40%;
+  --knob-box-shadow: 0px 0px 12px #3d3d3d;
+  --knob-size: 100px;
+  --pin-background: #00072c;
+}
